@@ -1,7 +1,5 @@
 #pragma once
 
-#include "Module.h"
-
 class Log : public Module<Log>
 {
 public:

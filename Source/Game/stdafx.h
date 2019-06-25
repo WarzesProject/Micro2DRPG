@@ -11,6 +11,7 @@
 #include <exception>
 #include <memory>
 #include <chrono>
+#include <functional>
 #include <iostream>
 #include <string>
 #include <string_view>
@@ -24,5 +25,12 @@
 #include <SDL2/SDL_image.h>
 //#include <glm/glm.hpp>
 #include <spdlog/spdlog.h>
+#ifdef EMSCRIPTEN
+#	include <emscripten.h>
+#endif
 
 //#pragma warning(pop)
+
+//-----------------------------------------------------------------------------
+// Engine Header
+#include "Module.h"

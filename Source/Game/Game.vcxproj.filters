@@ -3,21 +3,45 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="Utility.cpp">
-      <Filter>Engine</Filter>
-    </ClCompile>
     <ClCompile Include="Application.cpp">
       <Filter>Engine\App</Filter>
     </ClCompile>
     <ClCompile Include="Log.cpp">
       <Filter>Engine\Debug</Filter>
     </ClCompile>
+    <ClCompile Include="Utility.cpp">
+      <Filter>Engine\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Engine\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Cursor.cpp">
+      <Filter>Engine\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Engine\App\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>Engine\App\window</Filter>
+    </ClCompile>
+    <ClCompile Include="sdlRwops.cpp">
+      <Filter>Engine\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="SdlSurface.cpp">
+      <Filter>Engine\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Engine\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Engine\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Engine\Render</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="Utility.h">
-      <Filter>Engine</Filter>
-    </ClInclude>
     <ClInclude Include="NonCopyable.h">
       <Filter>Engine\Base</Filter>
     </ClInclude>
@@ -36,6 +60,48 @@
     <ClInclude Include="Profile.h">
       <Filter>Engine\Debug</Filter>
     </ClInclude>
+    <ClInclude Include="Utility.h">
+      <Filter>Engine\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Engine\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Cursor.h">
+      <Filter>Engine\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="CoreInput.h">
+      <Filter>Engine\App\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>Engine\App\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector2d.h">
+      <Filter>Engine\math</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>Engine\App\window</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>Engine\math</Filter>
+    </ClInclude>
+    <ClInclude Include="sdlRwops.h">
+      <Filter>Engine\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="SdlSurface.h">
+      <Filter>Engine\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="DefaultFont.h">
+      <Filter>Engine\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>Engine\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Engine\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Engine\Render</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">
@@ -52,6 +118,21 @@
     </Filter>
     <Filter Include="Engine\Debug">
       <UniqueIdentifier>{498760d8-2816-4e0c-892a-38aa6d55fe5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Utility">
+      <UniqueIdentifier>{2a987654-55b0-4c2a-955d-13c141537cae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\math">
+      <UniqueIdentifier>{168777cd-51c1-4f04-9745-059b8c970387}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\App\Input">
+      <UniqueIdentifier>{07509324-af95-41bb-a323-8fc89b0f875a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\App\window">
+      <UniqueIdentifier>{8dc22914-160d-442a-8565-9b9853bbb8b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Render">
+      <UniqueIdentifier>{8b85fdd1-4db7-4ac9-aa25-6494a58f591d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -2,7 +2,7 @@
 
 struct ApplicationConfig
 {
-	std::string title{ "<Insert title here!>" };
+	std::string title{ "Game" };
 	
 	uint32_t width{ 640 };
 	uint32_t height{ 480 };
