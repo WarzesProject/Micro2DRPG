@@ -24,9 +24,6 @@
     <ClCompile Include="Window.cpp">
       <Filter>Engine\App\window</Filter>
     </ClCompile>
-    <ClCompile Include="sdlRwops.cpp">
-      <Filter>Engine\Utility</Filter>
-    </ClCompile>
     <ClCompile Include="SdlSurface.cpp">
       <Filter>Engine\Utility</Filter>
     </ClCompile>
@@ -87,9 +84,6 @@
     </ClInclude>
     <ClInclude Include="Color.h">
       <Filter>Engine\math</Filter>
-    </ClInclude>
-    <ClInclude Include="sdlRwops.h">
-      <Filter>Engine\Utility</Filter>
     </ClInclude>
     <ClInclude Include="SdlSurface.h">
       <Filter>Engine\Utility</Filter>

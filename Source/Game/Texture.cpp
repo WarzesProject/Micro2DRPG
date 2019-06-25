@@ -9,14 +9,6 @@ Texture::Texture(const Renderer &renderer, const std::string &file)
 	loadTextureFromSurface(renderer, *sdlSurface);
 }
 //-----------------------------------------------------------------------------
-Texture::Texture(const Renderer &renderer, const void *data, size_t dataSize)
-{
-	const auto sdlRwops = std::make_unique<SdlRwops>(data, dataSize);
-	const auto sdlSurface = std::make_unique<SdlSurface>(*sdlRwops);
-
-	loadTextureFromSurface(renderer, *sdlSurface);
-}
-//-----------------------------------------------------------------------------
 Texture::Texture(const Renderer &renderer, int width, int height, Color color)
 {
 	const auto sdlSurface = std::make_unique<SdlSurface>(width, height, 32);

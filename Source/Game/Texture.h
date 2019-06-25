@@ -11,7 +11,6 @@ class Texture
 	friend class Renderer;
 public:
 	Texture(const Renderer &renderer, const std::string &file);
-	Texture(const Renderer &renderer, const void *data, size_t dataSize);
 	Texture(const Renderer &renderer, int width, int height, Color color);
 	Texture(const Renderer &renderer, const Font &font, const std::string &text, Color foreground);
 	~Texture();

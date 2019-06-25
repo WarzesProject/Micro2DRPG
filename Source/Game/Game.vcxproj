@@ -185,7 +185,6 @@
     <ClCompile Include="Log.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Renderer.cpp" />
-    <ClCompile Include="sdlRwops.cpp" />
     <ClCompile Include="SdlSurface.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -214,7 +213,6 @@
     <ClInclude Include="Profile.h" />
     <ClInclude Include="Rect.h" />
     <ClInclude Include="Renderer.h" />
-    <ClInclude Include="sdlRwops.h" />
     <ClInclude Include="SdlSurface.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="stdafx.h" />

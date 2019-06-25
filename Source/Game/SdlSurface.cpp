@@ -9,13 +9,6 @@ SdlSurface::SdlSurface(const std::string &file)
 		throw std::runtime_error(IMG_GetError());
 }
 //-----------------------------------------------------------------------------
-SdlSurface::SdlSurface(const SdlRwops& rwops)
-{
-	m_surface = IMG_Load_RW((SDL_RWops *)rwops.InternalObject(), 0);
-	if (nullptr == m_surface)
-		throw std::runtime_error(IMG_GetError());
-}
-//-----------------------------------------------------------------------------
 SdlSurface::SdlSurface(int width, int height, int depth)
 {
 	m_surface = SDL_CreateRGBSurface(SDL_SWSURFACE, width, height, depth, 0, 0, 0, 0);

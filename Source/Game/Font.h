@@ -5,7 +5,6 @@ class Font
 	friend class SdlSurface;
 public:
 	Font(const std::string &file, int size);
-	Font(const void *data, size_t dataSize, int size);
 	~Font();
 
 	void GlyphMetrics(uint16_t glyph, int *minX, int *maxX, int *minY, int *maxY, int *advance) const;
