@@ -11,7 +11,7 @@ public:
 	SdlSurface(const Font &font, const std::string &text, Color foreground);
 	~SdlSurface();
 
-	void *InternalObject() const;
+	void* InternalObject() const { return m_surface; }
 
 private:
 	void *m_surface{ nullptr };

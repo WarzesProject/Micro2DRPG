@@ -1,8 +1,9 @@
 #pragma once
 
 #include "AppConfig.h"
+#include "SDLApp.h"
 
-class Application
+class Application : private SDLApp
 {
 public:
 	Application(const ApplicationConfig &config);
@@ -13,8 +14,6 @@ public:
 	void EndFrame();
 
 private:
-	void initSDL();
-
 	ApplicationConfig m_config;
 	bool m_running{ true };
 };

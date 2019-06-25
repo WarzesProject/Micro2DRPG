@@ -178,13 +178,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
-    <ClCompile Include="Cursor.cpp" />
+    <ClCompile Include="Exception.cpp" />
     <ClCompile Include="Font.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Log.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="SDLApp.cpp" />
     <ClCompile Include="SdlSurface.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="stdafx.cpp">
@@ -203,7 +204,7 @@
     <ClInclude Include="Application.h" />
     <ClInclude Include="Color.h" />
     <ClInclude Include="CoreInput.h" />
-    <ClInclude Include="Cursor.h" />
+    <ClInclude Include="Exception.h" />
     <ClInclude Include="Font.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Input.h" />
@@ -213,6 +214,7 @@
     <ClInclude Include="Profile.h" />
     <ClInclude Include="Rect.h" />
     <ClInclude Include="Renderer.h" />
+    <ClInclude Include="SDLApp.h" />
     <ClInclude Include="SdlSurface.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="stdafx.h" />

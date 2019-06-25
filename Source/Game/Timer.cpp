@@ -1,10 +1,14 @@
 #include "stdafx.h"
 #include "Timer.h"
 
+TODO("фиксация фпс не особо нужна, есть vsync");
 //-----------------------------------------------------------------------------
-Timer::Timer(uint32_t fps)
+Timer::Timer(uint32_t fps, bool enableFixedFps)
 {
 	EnableFixedFps(fps);
+	if (!enableFixedFps)
+		DisableFixedFps();
+
 	valid() = true;
 }
 //-----------------------------------------------------------------------------

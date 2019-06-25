@@ -15,17 +15,11 @@
     <ClCompile Include="Timer.cpp">
       <Filter>Engine\Utility</Filter>
     </ClCompile>
-    <ClCompile Include="Cursor.cpp">
-      <Filter>Engine\Utility</Filter>
-    </ClCompile>
     <ClCompile Include="Input.cpp">
       <Filter>Engine\App\Input</Filter>
     </ClCompile>
     <ClCompile Include="Window.cpp">
       <Filter>Engine\App\window</Filter>
-    </ClCompile>
-    <ClCompile Include="SdlSurface.cpp">
-      <Filter>Engine\Utility</Filter>
     </ClCompile>
     <ClCompile Include="Font.cpp">
       <Filter>Engine\Render</Filter>
@@ -40,6 +34,15 @@
       <Filter>Engine\Audio</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="SdlSurface.cpp">
+      <Filter>Engine\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="SDLApp.cpp">
+      <Filter>Engine\App</Filter>
+    </ClCompile>
+    <ClCompile Include="Exception.cpp">
+      <Filter>Engine\Debug</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -67,9 +70,6 @@
     <ClInclude Include="Timer.h">
       <Filter>Engine\Utility</Filter>
     </ClInclude>
-    <ClInclude Include="Cursor.h">
-      <Filter>Engine\Utility</Filter>
-    </ClInclude>
     <ClInclude Include="CoreInput.h">
       <Filter>Engine\App\Input</Filter>
     </ClInclude>
@@ -84,9 +84,6 @@
     </ClInclude>
     <ClInclude Include="Color.h">
       <Filter>Engine\math</Filter>
-    </ClInclude>
-    <ClInclude Include="SdlSurface.h">
-      <Filter>Engine\Utility</Filter>
     </ClInclude>
     <ClInclude Include="Font.h">
       <Filter>Engine\Render</Filter>
@@ -104,6 +101,15 @@
       <Filter>Engine\Audio</Filter>
     </ClInclude>
     <ClInclude Include="Game.h" />
+    <ClInclude Include="SdlSurface.h">
+      <Filter>Engine\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="SDLApp.h">
+      <Filter>Engine\App</Filter>
+    </ClInclude>
+    <ClInclude Include="Exception.h">
+      <Filter>Engine\Debug</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">

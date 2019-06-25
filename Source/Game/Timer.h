@@ -3,7 +3,7 @@
 class Timer : public Module<Timer>
 {
 public:
-	explicit Timer(uint32_t fps);
+	explicit Timer(uint32_t fps, bool enableFixedFps = true);
 
 	void Start();
 	void Snapshot();

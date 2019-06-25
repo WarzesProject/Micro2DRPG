@@ -36,9 +36,6 @@
 //#pragma warning(pop)
 
 //-----------------------------------------------------------------------------
-
-//#define GET_TYPE_ID(T)      typeid(T).hash_code()
-//#define GET_TYPE_NAME(T)    typeid(T).name()
-
 // Engine Header
+#include "Exception.h"
 #include "Module.h"

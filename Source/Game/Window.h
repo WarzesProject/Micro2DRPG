@@ -7,8 +7,8 @@ public:
 	Window(const std::string &title, int width, int height, bool fullscreen);
 	~Window();
 
-	int Width() const;
-	int Height() const;
+	int Width();
+	int Height();
 
 private:
 	SDL_Window *m_window{ nullptr };

@@ -33,11 +33,15 @@ int main(int argc, char **argv)
 	}
 	catch (const std::runtime_error &error)
 	{
-		std::cout << error.what() << std::endl;
+		std::cerr << "Fatal error:" << error.what() << std::endl;
 	}
 	catch (const std::invalid_argument &error)
 	{
-		std::cout << error.what() << std::endl;
+		std::cerr << "Fatal error:" << error.what() << std::endl;
+	}
+	catch (const SDLException & error)
+	{
+		std::cerr << "Fatal error:" << error.what()  << ", SDL error: " << error.GetSDLError() << std::endl;
 	}
 	//catch (...)
 	//{

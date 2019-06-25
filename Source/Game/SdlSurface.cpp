@@ -32,8 +32,3 @@ SdlSurface::~SdlSurface()
 	SDL_FreeSurface((SDL_Surface*)m_surface);
 }
 //-----------------------------------------------------------------------------
-void *SdlSurface::InternalObject() const
-{
-	return m_surface;
-}
-//-----------------------------------------------------------------------------
