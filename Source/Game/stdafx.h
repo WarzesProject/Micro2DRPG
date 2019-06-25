@@ -16,6 +16,8 @@
 #include <string>
 #include <string_view>
 #include <vector>
+#include <map>
+#include <unordered_map>
 
 //-----------------------------------------------------------------------------
 // 3rd Header
@@ -34,3 +36,6 @@
 //-----------------------------------------------------------------------------
 // Engine Header
 #include "Module.h"
+
+#define GET_TYPE_ID(T)      typeid(T).hash_code()
+#define GET_TYPE_NAME(T)    typeid(T).name()

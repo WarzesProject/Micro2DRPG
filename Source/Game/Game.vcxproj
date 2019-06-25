@@ -179,6 +179,8 @@
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="Cursor.cpp" />
+    <ClCompile Include="EcsManager.cpp" />
+    <ClCompile Include="EntityManager.cpp" />
     <ClCompile Include="Font.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Log.cpp" />
@@ -186,12 +188,16 @@
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="sdlRwops.cpp" />
     <ClCompile Include="SdlSurface.cpp" />
+    <ClCompile Include="Sound.cpp" />
+    <ClCompile Include="StateMachine.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="System.cpp" />
+    <ClCompile Include="SystemManager.cpp" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Utility.cpp" />
@@ -201,19 +207,31 @@
     <ClInclude Include="AppConfig.h" />
     <ClInclude Include="Application.h" />
     <ClInclude Include="Color.h" />
+    <ClInclude Include="Component.h" />
+    <ClInclude Include="ComponentCollection.h" />
     <ClInclude Include="CoreInput.h" />
     <ClInclude Include="Cursor.h" />
     <ClInclude Include="DefaultFont.h" />
+    <ClInclude Include="EcsManager.h" />
+    <ClInclude Include="EntityManager.h" />
     <ClInclude Include="Font.h" />
+    <ClInclude Include="HeterogeneousCollection.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="Log.h" />
     <ClInclude Include="Module.h" />
     <ClInclude Include="NonCopyable.h" />
+    <ClInclude Include="OrderedHeterogeneousCollection.h" />
     <ClInclude Include="Profile.h" />
+    <ClInclude Include="Rect.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="sdlRwops.h" />
     <ClInclude Include="SdlSurface.h" />
+    <ClInclude Include="Sound.h" />
+    <ClInclude Include="State.h" />
+    <ClInclude Include="StateMachine.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="System.h" />
+    <ClInclude Include="SystemManager.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Utility.h" />
