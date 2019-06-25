@@ -1,5 +1,6 @@
 ﻿#include "stdafx.h"
-#include "Utility.h"
+#include "Application.h"
+#include "Profile.h"
 
 //-----------------------------------------------------------------------------
 #pragma comment(lib, "SDL2.lib")
@@ -15,10 +16,12 @@ int main(int argc, char **argv)
 
 	try
 	{
+		ApplicationConfig config;
+		Application app(config);
 	}
 	catch (const std::runtime_error &error)
 	{
-
+		std::cout << error.what() << std::endl;
 	}
 	catch (...)
 	{

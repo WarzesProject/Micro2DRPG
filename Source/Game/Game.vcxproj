@@ -177,6 +177,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Log.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -187,8 +189,12 @@
     <ClCompile Include="Utility.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AppConfig.h" />
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="Log.h" />
     <ClInclude Include="Module.h" />
     <ClInclude Include="NonCopyable.h" />
+    <ClInclude Include="Profile.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Utility.h" />
   </ItemGroup>

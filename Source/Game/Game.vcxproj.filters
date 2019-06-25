@@ -6,6 +6,12 @@
     <ClCompile Include="Utility.cpp">
       <Filter>Engine</Filter>
     </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>Engine\App</Filter>
+    </ClCompile>
+    <ClCompile Include="Log.cpp">
+      <Filter>Engine\Debug</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -18,6 +24,18 @@
     <ClInclude Include="Module.h">
       <Filter>Engine\Base</Filter>
     </ClInclude>
+    <ClInclude Include="AppConfig.h">
+      <Filter>Engine\App</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.h">
+      <Filter>Engine\App</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>Engine\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="Profile.h">
+      <Filter>Engine\Debug</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">
@@ -28,6 +46,12 @@
     </Filter>
     <Filter Include="Engine\Base">
       <UniqueIdentifier>{6889ef27-67d0-40d5-91ae-4e89e7ffdc08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\App">
+      <UniqueIdentifier>{5f864165-feeb-418a-85bc-aba595608a44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Debug">
+      <UniqueIdentifier>{498760d8-2816-4e0c-892a-38aa6d55fe5c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
