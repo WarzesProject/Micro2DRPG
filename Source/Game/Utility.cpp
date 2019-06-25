@@ -24,7 +24,7 @@ std::string GetResourcePath(const std::string &subDir)
 			throw std::runtime_error("Error getting resource path: " + std::string(SDL_GetError()));
 
 		size_t pos = baseRes.rfind("bin");
-		baseRes = baseRes.substr(0, pos) + "data" + PATH_SEP;
+		baseRes = baseRes.substr(0, pos+4) + "data" + PATH_SEP;
 	}
 	return subDir.empty() ? baseRes : baseRes + subDir + PATH_SEP;
 }
@@ -32,5 +32,6 @@ std::string GetResourcePath(const std::string &subDir)
 std::string GetStoragePath()
 {
 	TODO("SDL_GetPrefPath()");
+	return "";
 }
 //-----------------------------------------------------------------------------

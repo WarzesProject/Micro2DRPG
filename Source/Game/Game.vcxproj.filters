@@ -3,20 +3,20 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="Base.cpp">
-      <Filter>Engine</Filter>
-    </ClCompile>
     <ClCompile Include="Utility.cpp">
       <Filter>Engine</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="Base.h">
-      <Filter>Engine</Filter>
-    </ClInclude>
     <ClInclude Include="Utility.h">
       <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="NonCopyable.h">
+      <Filter>Engine\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="Module.h">
+      <Filter>Engine\Base</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -25,6 +25,9 @@
     </Filter>
     <Filter Include="Game">
       <UniqueIdentifier>{7753563f-a302-4021-be90-c859d056b6e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Base">
+      <UniqueIdentifier>{6889ef27-67d0-40d5-91ae-4e89e7ffdc08}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
