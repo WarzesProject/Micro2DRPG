@@ -6,7 +6,7 @@
 #pragma comment(lib, "SDL2main.lib") // remove??
 #pragma comment(lib, "SDL2_ttf.lib")
 #pragma comment(lib, "SDL2_mixer.lib")
-#pragma comment(lib, "glew32.lib")
+#pragma comment(lib, "SDL2_image.lib")
 //-----------------------------------------------------------------------------
 int main(int argc, char **argv)
 {
