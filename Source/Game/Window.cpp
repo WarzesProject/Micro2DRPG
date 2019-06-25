@@ -26,7 +26,6 @@ Window::Window(const std::string &title, int width, int height, bool fullscreen)
 
 	SDL_GetWindowSize(m_window, &m_width, &m_height);
 
-	setWindowIcon();
 	SDL_ShowWindow(m_window);
 
 	valid() = true;
@@ -45,60 +44,5 @@ int Window::Width() const
 int Window::Height() const
 {
 	return m_height;
-}
-//-----------------------------------------------------------------------------
-void Window::setWindowIcon()
-{
-#ifdef _WIN32
-	//// https://gist.github.com/noct/9884320
-
-	//auto handle = GetModuleHandle(nullptr);
-	//if (!handle)
-	//{
-	//	throw std::runtime_error(std::to_string(GetLastError()));
-	//}
-
-	//const uint32_t maskR = 0x00ff0000;
-	//const uint32_t maskG = 0x0000ff00;
-	//const uint32_t maskB = 0x000000ff;
-	//const uint32_t maskA = 0xff000000;
-	//const int size = 32;
-	//const int bpp = 32;
-
-	//auto icon = (HICON)LoadImage(handle, L"icon", IMAGE_ICON, size, size, LR_SHARED);
-	//if (nullptr == icon)
-	//	throw std::runtime_error(std::to_string(GetLastError()));
-
-	//ICONINFO iconInfo;
-	//if (FALSE == GetIconInfo(icon, &iconInfo))
-	//	throw std::runtime_error(std::to_string(GetLastError()));
-
-	//auto deviceContext = CreateCompatibleDC(nullptr);
-	//if (nullptr == deviceContext)
-	//	throw std::runtime_error(std::to_string(GetLastError()));
-
-	//auto surface = SDL_CreateRGBSurface(0, size, size, bpp, maskR, maskG, maskB, maskA);
-	//if (nullptr == surface)
-	//	throw std::runtime_error(IMG_GetError());
-
-	//BITMAPINFO bmi;
-	//bmi.bmiHeader.biSize = sizeof(BITMAPINFOHEADER);
-	//bmi.bmiHeader.biWidth = size;
-	//bmi.bmiHeader.biHeight = -size;
-	//bmi.bmiHeader.biPlanes = 1;
-	//bmi.bmiHeader.biBitCount = bpp;
-	//bmi.bmiHeader.biCompression = BI_RGB;
-	//bmi.bmiHeader.biSizeImage = 0;
-
-	//SelectObject(deviceContext, iconInfo.hbmColor);
-	//GetDIBits(deviceContext, iconInfo.hbmColor, 0, size, surface->pixels, &bmi, DIB_RGB_COLORS);
-	//SDL_SetWindowIcon(m_window, surface);
-
-	//SDL_FreeSurface(surface);
-	//DeleteDC(deviceContext);
-	//DeleteObject(iconInfo.hbmColor);
-	//DeleteObject(iconInfo.hbmMask);
-	//DestroyIcon(icon);
-#endif
 }
 //-----------------------------------------------------------------------------

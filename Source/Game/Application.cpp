@@ -7,12 +7,11 @@
 #include "Input.h"
 #include "Window.h"
 #include "Renderer.h"
-#include "EcsManager.h"
 
 //-----------------------------------------------------------------------------
 Application::Application(const ApplicationConfig &config)
 {
-	srand(static_cast<uint32_t>(time(nullptr))); // NOLINT
+	srand(static_cast<uint32_t>(time(nullptr)));
 
 	m_config = config;
 	Log::Create();
@@ -24,12 +23,10 @@ Application::Application(const ApplicationConfig &config)
 	Input::Create();
 	Window::Create(m_config.title, m_config.width, m_config.height, m_config.fullscreen);
 	Renderer::Create();
-	EcsManager::Create();
 }
 //-----------------------------------------------------------------------------
 Application::~Application()
 {
-	EcsManager::Destroy();
 	Renderer::Destroy();
 	Window::Destroy();
 	Input::Destroy();
@@ -51,7 +48,6 @@ float Application::BeginFrame()
 	static Timer &timer = GetModule<Timer>();
 	static Input &input = GetModule<Input>();
 	static Renderer &renderer = GetModule<Renderer>();
-	static EcsManager &ecsMgr = GetModule<EcsManager>();
 
 	timer.Start();
 	const auto deltaMultiplier = 0.001f;
@@ -59,7 +55,6 @@ float Application::BeginFrame()
 
 	renderer.Clear();
 	input.Update();
-	ecsMgr.Frame(delta);
 	return delta;
 }
 //-----------------------------------------------------------------------------

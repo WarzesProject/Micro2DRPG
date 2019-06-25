@@ -1,16 +1,21 @@
 #include "stdafx.h"
-#include "EcsManager.h"
+#include "Game.h"
+#include "Vector2d.h"
+#include "Rect.h"
+#include "Color.h"
+#include "Log.h"
 
 //-----------------------------------------------------------------------------
-EcsManager::EcsManager() 
-	: m_entityManager{ std::make_unique<EntityManager>() }
-	, m_systemManager{ std::make_unique<SystemManager>(*m_entityManager) }
+void Game::Init()
 {
-	valid() = true;
+
 }
 //-----------------------------------------------------------------------------
-void EcsManager::Frame(float delta)
+void Game::Frame(float delta)
 {
-	m_systemManager->Frame(delta);
+}
+//-----------------------------------------------------------------------------
+void Game::Close()
+{
 }
 //-----------------------------------------------------------------------------

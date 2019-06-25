@@ -28,9 +28,7 @@ void Input::Update()
 		{
 			const auto scancode = event.key.keysym.scancode;
 			if (m_keyboardKeysDown[scancode])
-			{
 				m_keyboardKeysPress[scancode] = true;
-			}
 			m_keyboardKeysDown[scancode] = false;
 
 			break;
@@ -42,15 +40,11 @@ void Input::Update()
 			const auto mouseState = SDL_GetMouseState(&m_mousePos.x, &m_mousePos.y);
 
 			if ((bool)(mouseState & SDL_BUTTON(SDL_BUTTON_LEFT)))
-			{
 				m_mouseButtonsDown[SDL_BUTTON_LEFT] = true;
-			}
 			else
 			{
 				if (m_mouseButtonsDown[SDL_BUTTON_LEFT])
-				{
 					m_mouseButtonsClick[SDL_BUTTON_LEFT] = true;
-				}
 
 				m_mouseButtonsDown[SDL_BUTTON_LEFT] = false;
 			}
@@ -58,9 +52,7 @@ void Input::Update()
 			if ((bool)(mouseState & SDL_BUTTON(SDL_BUTTON_MIDDLE)))
 			{
 				if (m_mouseButtonsDown[SDL_BUTTON_MIDDLE])
-				{
 					m_mouseButtonsClick[SDL_BUTTON_MIDDLE] = true;
-				}
 
 				m_mouseButtonsDown[SDL_BUTTON_MIDDLE] = true;
 			}
@@ -72,9 +64,7 @@ void Input::Update()
 			if ((bool)(mouseState & SDL_BUTTON(SDL_BUTTON_RIGHT)))
 			{
 				if (m_mouseButtonsDown[SDL_BUTTON_RIGHT])
-				{
 					m_mouseButtonsClick[SDL_BUTTON_RIGHT] = true;
-				}
 
 				m_mouseButtonsDown[SDL_BUTTON_RIGHT] = true;
 			}

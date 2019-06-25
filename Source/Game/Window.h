@@ -11,8 +11,6 @@ public:
 	int Height() const;
 
 private:
-	void setWindowIcon();
-
 	SDL_Window *m_window{ nullptr };
 	int m_width{ 0 };
 	int m_height{ 0 };

@@ -39,24 +39,10 @@
     <ClCompile Include="Texture.cpp">
       <Filter>Engine\Render</Filter>
     </ClCompile>
-    <ClCompile Include="EcsManager.cpp">
-      <Filter>Engine\ECS</Filter>
-    </ClCompile>
     <ClCompile Include="Sound.cpp">
       <Filter>Engine\Audio</Filter>
     </ClCompile>
-    <ClCompile Include="StateMachine.cpp">
-      <Filter>Engine\Utility\StateMachine</Filter>
-    </ClCompile>
-    <ClCompile Include="EntityManager.cpp">
-      <Filter>Engine\ECS\Entity</Filter>
-    </ClCompile>
-    <ClCompile Include="System.cpp">
-      <Filter>Engine\ECS\System</Filter>
-    </ClCompile>
-    <ClCompile Include="SystemManager.cpp">
-      <Filter>Engine\ECS\System</Filter>
-    </ClCompile>
+    <ClCompile Include="Game.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -108,9 +94,6 @@
     <ClInclude Include="SdlSurface.h">
       <Filter>Engine\Utility</Filter>
     </ClInclude>
-    <ClInclude Include="DefaultFont.h">
-      <Filter>Engine\Render</Filter>
-    </ClInclude>
     <ClInclude Include="Font.h">
       <Filter>Engine\Render</Filter>
     </ClInclude>
@@ -123,39 +106,10 @@
     <ClInclude Include="Rect.h">
       <Filter>Engine\math</Filter>
     </ClInclude>
-    <ClInclude Include="EcsManager.h">
-      <Filter>Engine\ECS</Filter>
-    </ClInclude>
     <ClInclude Include="Sound.h">
       <Filter>Engine\Audio</Filter>
     </ClInclude>
-    <ClInclude Include="HeterogeneousCollection.h">
-      <Filter>Engine\Utility\Collection</Filter>
-    </ClInclude>
-    <ClInclude Include="OrderedHeterogeneousCollection.h">
-      <Filter>Engine\Utility\Collection</Filter>
-    </ClInclude>
-    <ClInclude Include="State.h">
-      <Filter>Engine\Utility\StateMachine</Filter>
-    </ClInclude>
-    <ClInclude Include="StateMachine.h">
-      <Filter>Engine\Utility\StateMachine</Filter>
-    </ClInclude>
-    <ClInclude Include="Component.h">
-      <Filter>Engine\ECS\Component</Filter>
-    </ClInclude>
-    <ClInclude Include="ComponentCollection.h">
-      <Filter>Engine\ECS\Component</Filter>
-    </ClInclude>
-    <ClInclude Include="EntityManager.h">
-      <Filter>Engine\ECS\Entity</Filter>
-    </ClInclude>
-    <ClInclude Include="System.h">
-      <Filter>Engine\ECS\System</Filter>
-    </ClInclude>
-    <ClInclude Include="SystemManager.h">
-      <Filter>Engine\ECS\System</Filter>
-    </ClInclude>
+    <ClInclude Include="Game.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">
@@ -190,24 +144,6 @@
     </Filter>
     <Filter Include="Engine\Audio">
       <UniqueIdentifier>{56717443-7450-455c-8789-fdec0785e84d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Utility\Collection">
-      <UniqueIdentifier>{51473152-2da5-4382-b366-d37cd005fecd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\Utility\StateMachine">
-      <UniqueIdentifier>{145f873b-3408-405c-891d-4b37b17c30b9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\ECS">
-      <UniqueIdentifier>{a0c7c760-7aa6-4f97-a30b-bffdf11fbda7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\ECS\Entity">
-      <UniqueIdentifier>{12978ead-5120-45b1-8048-2e3adc97042a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\ECS\Component">
-      <UniqueIdentifier>{c5536341-fde3-475d-9011-3c23c7a9f6c7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Engine\ECS\System">
-      <UniqueIdentifier>{8cb4a9d6-ca2f-43ab-93dd-8ae7fe195147}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

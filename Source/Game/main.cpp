@@ -1,6 +1,6 @@
 ﻿#include "stdafx.h"
 #include "Application.h"
-#include "Profile.h"
+#include "Game.h"
 
 //-----------------------------------------------------------------------------
 #pragma comment(lib, "SDL2.lib")
@@ -8,16 +8,6 @@
 #pragma comment(lib, "SDL2_ttf.lib")
 #pragma comment(lib, "SDL2_mixer.lib")
 #pragma comment(lib, "SDL2_image.lib")
-//-----------------------------------------------------------------------------
-#ifdef EMSCRIPTEN
-App *appPtr;
-void Loop()
-{
-	const auto delta = appPtr.BeginFrame();
-	//...
-	appPtr.EndFrame();
-}
-#endif
 //-----------------------------------------------------------------------------
 int main(int argc, char **argv)
 {
@@ -28,27 +18,31 @@ int main(int argc, char **argv)
 	{
 		ApplicationConfig config;
 		Application app(config);
+		Game game;
 
-#ifdef EMSCRIPTEN
-		appPtr = &app;
-		emscripten_set_main_loop(Loop, 0, 1);
-#else
+		game.Init();
+
 		while (app.Running())
 		{
 			const auto delta = app.BeginFrame();
-			//...
+			game.Frame(delta);
 			app.EndFrame();
 		}
-#endif
+
+		game.Close();
 	}
 	catch (const std::runtime_error &error)
 	{
 		std::cout << error.what() << std::endl;
 	}
-	catch (...)
+	catch (const std::invalid_argument &error)
 	{
-
+		std::cout << error.what() << std::endl;
 	}
+	//catch (...)
+	//{
+
+	//}
 
 	return 0;
 }

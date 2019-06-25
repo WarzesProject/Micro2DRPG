@@ -12,7 +12,9 @@
 #include <memory>
 #include <chrono>
 #include <functional>
+#include <algorithm>
 #include <iostream>
+#include <sstream>
 #include <string>
 #include <string_view>
 #include <vector>
@@ -34,8 +36,9 @@
 //#pragma warning(pop)
 
 //-----------------------------------------------------------------------------
+
+//#define GET_TYPE_ID(T)      typeid(T).hash_code()
+//#define GET_TYPE_NAME(T)    typeid(T).name()
+
 // Engine Header
 #include "Module.h"
-
-#define GET_TYPE_ID(T)      typeid(T).hash_code()
-#define GET_TYPE_NAME(T)    typeid(T).name()
