@@ -4,7 +4,8 @@
 //-----------------------------------------------------------------------------
 Surface::Surface(SDL_Surface *surface) : m_surface(surface) 
 {
-	assert(surface);
+	if (nullptr == m_surface)
+		throw std::runtime_error(TTF_GetError());
 }
 //-----------------------------------------------------------------------------
 Surface::Surface(int width, int height, int depth, Uint32 Rmask, Uint32 Gmask, Uint32 Bmask, Uint32 Amask)

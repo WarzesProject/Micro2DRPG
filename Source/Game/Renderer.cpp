@@ -2,6 +2,7 @@
 #include "Renderer.h"
 #include "Window.h"
 #include "Texture.h"
+#include "Text.h"
 
 //-----------------------------------------------------------------------------
 Renderer::Renderer()
@@ -46,12 +47,12 @@ void Renderer::SetRenderColor(Color color) const
 		throw std::runtime_error(SDL_GetError());
 }
 //-----------------------------------------------------------------------------
-void Renderer::RenderTexture(int x, int y, const Texture& texture) const
+void Renderer::RenderTexture(int x, int y, const Texture &texture) const
 {
 	RenderTexture(x, y, texture, 0.0);
 }
 //-----------------------------------------------------------------------------
-void Renderer::RenderTexture(int x, int y, const Texture& texture, double angle) const
+void Renderer::RenderTexture(int x, int y, const Texture &texture, double angle) const
 {
 	const auto sdlTexture = texture.m_texture;
 
@@ -64,6 +65,22 @@ void Renderer::RenderTexture(int x, int y, const Texture& texture, double angle)
 	const SDL_Point pivot{ 0, 0 };
 
 	SDL_RenderCopyEx(m_renderer, sdlTexture, nullptr, &rect, angle, &pivot, SDL_FLIP_NONE);
+}
+//-----------------------------------------------------------------------------
+void Renderer::RenderTexture(int x, int y, const Texture &texture, const Rect &clip) const
+{
+	const auto sdlTexture = texture.m_texture;
+
+	const SDL_Rect rect{ x, y, clip.w, clip.h };
+	const SDL_Rect sdlClip{ clip.x, clip.y, clip.w, clip.h };
+	SDL_RenderCopy(m_renderer, sdlTexture, &sdlClip, &rect);
+}
+//-----------------------------------------------------------------------------
+void Renderer::RenderText(int x, int y, const Text &text) const
+{
+	const auto sdlTexture = text.m_texture;
+	const SDL_Rect rect{ x, y, text.m_rect.w, text.m_rect.h };
+	SDL_RenderCopy(m_renderer, sdlTexture, nullptr, &rect);
 }
 //-----------------------------------------------------------------------------
 void Renderer::RenderLine(float x1, float y1, float x2, float y2, Color color) const
@@ -79,8 +96,6 @@ void Renderer::RenderPoint(float x, float y, Color color) const
 	SetRenderColor(color);
 
 	if (SDL_RenderDrawPoint(m_renderer, (int)x, (int)y) < 0)
-	{
 		throw std::runtime_error(SDL_GetError());
-	}
 }
 //-----------------------------------------------------------------------------

@@ -2,7 +2,7 @@
 
 class Font
 {
-	friend class SdlSurface;
+	friend class Text;
 public:
 	Font(const std::string &file, int size);
 	~Font();

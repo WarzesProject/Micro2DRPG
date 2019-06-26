@@ -34,9 +34,6 @@
       <Filter>Engine\Audio</Filter>
     </ClCompile>
     <ClCompile Include="Game.cpp" />
-    <ClCompile Include="SdlSurface.cpp">
-      <Filter>Engine\Render</Filter>
-    </ClCompile>
     <ClCompile Include="SDLApp.cpp">
       <Filter>Engine\App</Filter>
     </ClCompile>
@@ -53,6 +50,9 @@
       <Filter>Engine\Render</Filter>
     </ClCompile>
     <ClCompile Include="SurfaceLock.cpp">
+      <Filter>Engine\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
       <Filter>Engine\Render</Filter>
     </ClCompile>
   </ItemGroup>
@@ -113,9 +113,6 @@
       <Filter>Engine\Audio</Filter>
     </ClInclude>
     <ClInclude Include="Game.h" />
-    <ClInclude Include="SdlSurface.h">
-      <Filter>Engine\Render</Filter>
-    </ClInclude>
     <ClInclude Include="SDLApp.h">
       <Filter>Engine\App</Filter>
     </ClInclude>
@@ -129,6 +126,9 @@
       <Filter>Engine\Utility</Filter>
     </ClInclude>
     <ClInclude Include="Surface.h">
+      <Filter>Engine\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
       <Filter>Engine\Render</Filter>
     </ClInclude>
   </ItemGroup>
