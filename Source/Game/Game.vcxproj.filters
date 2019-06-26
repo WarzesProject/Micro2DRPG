@@ -43,6 +43,15 @@
     <ClCompile Include="Exception.cpp">
       <Filter>Engine\Debug</Filter>
     </ClCompile>
+    <ClCompile Include="Point.cpp">
+      <Filter>Engine\math</Filter>
+    </ClCompile>
+    <ClCompile Include="Rect.cpp">
+      <Filter>Engine\math</Filter>
+    </ClCompile>
+    <ClCompile Include="Color.cpp">
+      <Filter>Engine\math</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -109,6 +118,12 @@
     </ClInclude>
     <ClInclude Include="Exception.h">
       <Filter>Engine\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>Engine\math</Filter>
+    </ClInclude>
+    <ClInclude Include="Optional.h">
+      <Filter>Engine\Utility</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

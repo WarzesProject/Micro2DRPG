@@ -1,13 +1,64 @@
 #pragma once
 
-struct Color
+class Color : public SDL_Color
 {
-	Color() = default;
-	Color(uint8_t nr, uint8_t ng, uint8_t nb) : r(nr), g(ng), b(nb), a(255) {}
-	Color(uint8_t nr, uint8_t ng, uint8_t nb, uint8_t na) : r(nr), g(ng), b(nb), a(na) {}
+public:
+	constexpr Color() : SDL_Color{ 0, 0, 0, 0 } {}
+	constexpr Color(const SDL_Color& color) : SDL_Color{ color.r, color.g, color.b, color.a } {}
+	constexpr Color(Uint8 r, Uint8 g, Uint8 b, Uint8 a = SDL_ALPHA_OPAQUE) : SDL_Color{ r, g, b, a } {}
 
-	uint8_t r = 0;
-	uint8_t g = 0;
-	uint8_t b = 0;
-	uint8_t a = 0;
+	constexpr Uint8 GetRed() const
+	{
+		return r;
+	}
+
+	Color& SetRed(int nr)
+	{
+		r = nr;
+		return *this;
+	}
+
+	constexpr Uint8 GetGreen() const 
+	{
+		return g;
+	}
+
+	Color& SetGreen(int ng) 
+	{
+		g = ng;
+		return *this;
+	}
+
+	constexpr Uint8 GetBlue() const 
+	{
+		return b;
+	}
+
+	Color& SetBlue(int nb) 
+	{
+		b = nb;
+		return *this;
+	}
+
+	constexpr Uint8 GetAlpha() const
+	{
+		return a;
+	}
+
+	Color& SetAlpha(int na)
+	{
+		a = na;
+		return *this;
+	}
 };
+
+
+constexpr bool operator==(const Color& a, const Color& b) 
+{
+	return a.r == b.r && a.g == b.g && a.b == b.b && a.a == b.a;
+}
+
+constexpr bool operator!=(const Color& a, const Color& b)
+{
+	return !(a == b);
+}

@@ -178,12 +178,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
+    <ClCompile Include="Color.cpp" />
     <ClCompile Include="Exception.cpp" />
     <ClCompile Include="Font.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Log.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="Rect.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="SDLApp.cpp" />
     <ClCompile Include="SdlSurface.cpp" />
@@ -211,6 +214,8 @@
     <ClInclude Include="Log.h" />
     <ClInclude Include="Module.h" />
     <ClInclude Include="NonCopyable.h" />
+    <ClInclude Include="Optional.h" />
+    <ClInclude Include="Point.h" />
     <ClInclude Include="Profile.h" />
     <ClInclude Include="Rect.h" />
     <ClInclude Include="Renderer.h" />

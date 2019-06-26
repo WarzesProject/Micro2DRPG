@@ -1,3 +1,0 @@
-libSDL2pp
-sdl game engine
-lazyfoo
