@@ -16,6 +16,8 @@ Texture::Texture(const std::string &file)
 //-----------------------------------------------------------------------------
 Texture::Texture(int width, int height, Color color)
 {
+	TODO("переделать в SDL_CreateTexture");
+
 	const auto sdlSurface = std::make_unique<Surface>(width, height, 32, 0, 0, 0, 0);
 	const auto sdlSurfaceObject = sdlSurface->Get();
 	const auto rgbUint = SDL_MapRGB(sdlSurfaceObject->format, color.r, color.g, color.b);

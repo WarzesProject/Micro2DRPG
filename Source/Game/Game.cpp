@@ -17,6 +17,11 @@ void Game::Init()
 	m_text = new Text();
 
 	m_text->SetText(*m_font, "Hello привет", { 100,255, 255 }, false);
+
+
+	static auto &renderer = GetModule<Renderer>();
+
+	renderer.SetClearColor({ 100,0,100 });
 }
 //-----------------------------------------------------------------------------
 void Game::Frame(float delta)

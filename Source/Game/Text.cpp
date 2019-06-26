@@ -4,6 +4,15 @@
 #include "Renderer.h"
 
 //-----------------------------------------------------------------------------
+Text::~Text()
+{
+	if (m_texture)
+	{
+		SDL_DestroyTexture(m_texture);
+		m_texture = nullptr;
+	}
+}
+//-----------------------------------------------------------------------------
 void Text::SetText(const Font &font, const std::string &text, Color color, bool blended)
 {
 	if (m_texture)

@@ -7,6 +7,8 @@ class Text
 {
 	friend class Renderer;
 public:
+	~Text();
+
 	void SetText(const Font &font, const std::string &text, Color color, bool blended = true);
 
 private:
