@@ -162,7 +162,7 @@ public:
 
 	Optional<Rect> GetIntersection(const Rect& rect) const;
 
-	////////////////////////////////////////////////////////////
+	
 	/// \brief Calculate the intersection of a rectangle and line segment
 	///
 	/// \param[in,out] x1 Starting X-coordinate of the line
@@ -180,10 +180,10 @@ public:
 	/// the new coordinates saved in x1, y1, x2, and/or y2 as
 	/// necessary.
 	///
-	////////////////////////////////////////////////////////////
+	
 	bool IntersectLine(int& x1, int& y1, int& x2, int& y2) const;
 
-	////////////////////////////////////////////////////////////
+	
 	/// \brief Calculate the intersection of a rectangle and line segment
 	///
 	/// \param[in,out] p1 Starting coordinates of the line
@@ -198,7 +198,7 @@ public:
 	/// ends will be clipped to the boundary of the rectangle and
 	/// the new coordinates saved in p1 and/or p2 as necessary.
 	///
-	////////////////////////////////////////////////////////////
+	
 	bool IntersectLine(Point& p1, Point& p2) const;
 
 	constexpr Rect operator+(const Point& offset) const

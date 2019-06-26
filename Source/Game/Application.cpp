@@ -8,6 +8,12 @@
 #include "Renderer.h"
 
 //-----------------------------------------------------------------------------
+bool isExitApp = false;
+void ExitApp()
+{
+	isExitApp = true;
+}
+//-----------------------------------------------------------------------------
 Application::Application(const ApplicationConfig &config)
 {
 	srand(static_cast<uint32_t>(time(nullptr)));
@@ -33,7 +39,7 @@ Application::~Application()
 //-----------------------------------------------------------------------------
 bool Application::Running() const
 {
-	return m_running;
+	return m_running && !isExitApp;
 }
 //-----------------------------------------------------------------------------
 float Application::BeginFrame()

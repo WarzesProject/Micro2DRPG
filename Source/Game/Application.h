@@ -17,3 +17,5 @@ private:
 	ApplicationConfig m_config;
 	bool m_running{ true };
 };
+
+void ExitApp();

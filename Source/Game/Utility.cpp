@@ -19,7 +19,7 @@ std::string GetResourcePath(const std::string &subDir)
 			SDL_free(basePath);
 		}
 		else
-			throw std::runtime_error("Error getting resource path: " + std::string(SDL_GetError()));
+			throw SDLException("Error getting resource path: ");
 
 		size_t pos = baseRes.rfind("bin");
 		baseRes = baseRes.substr(0, pos+4) + "data" + PATH_SEP;

@@ -9,13 +9,11 @@ Renderer::Renderer()
 	auto &window = GetModule<Window>();
 	const auto sdlWindow = window.m_window;
 
-	Uint32 flags = SDL_RENDERER_ACCELERATED /*| SDL_RENDERER_PRESENTVSYNC*/;
+	const Uint32 flags = SDL_RENDERER_ACCELERATED /*| SDL_RENDERER_PRESENTVSYNC*/;
 
 	m_renderer = SDL_CreateRenderer(sdlWindow, -1, flags);
 	if (nullptr == m_renderer)
 		throw SDLException("SDL_CreateRenderer");
-
-	SDL_GetWindowSize(sdlWindow, &m_width, &m_height);
 
 	valid() = true;
 }
@@ -28,7 +26,6 @@ Renderer::~Renderer()
 void Renderer::Clear()
 {
 	SetRenderColor(m_clearColor);
-
 	if (SDL_RenderClear(m_renderer) != 0)
 		throw SDLException("SDL_RenderClear");
 }
@@ -85,15 +82,5 @@ void Renderer::RenderPoint(float x, float y, Color color) const
 	{
 		throw std::runtime_error(SDL_GetError());
 	}
-}
-//-----------------------------------------------------------------------------
-int Renderer::Width() const
-{
-	return m_width;
-}
-//-----------------------------------------------------------------------------
-int Renderer::Height() const
-{
-	return m_height;
 }
 //-----------------------------------------------------------------------------

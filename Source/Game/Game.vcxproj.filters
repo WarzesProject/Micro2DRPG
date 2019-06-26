@@ -49,8 +49,11 @@
     <ClCompile Include="Rect.cpp">
       <Filter>Engine\math</Filter>
     </ClCompile>
-    <ClCompile Include="Color.cpp">
-      <Filter>Engine\math</Filter>
+    <ClCompile Include="Surface.cpp">
+      <Filter>Engine\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="SurfaceLock.cpp">
+      <Filter>Engine\Render</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -124,6 +127,9 @@
     </ClInclude>
     <ClInclude Include="Optional.h">
       <Filter>Engine\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Surface.h">
+      <Filter>Engine\Render</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

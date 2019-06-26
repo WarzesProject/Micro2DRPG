@@ -31,6 +31,10 @@ int main(int argc, char **argv)
 
 		game.Close();
 	}
+	catch (const SDLException &error)
+	{
+		std::cerr << "Fatal error:" << error.what() << ", SDL error: " << error.GetSDLError() << std::endl;
+	}
 	catch (const std::runtime_error &error)
 	{
 		std::cerr << "Fatal error:" << error.what() << std::endl;
@@ -38,11 +42,7 @@ int main(int argc, char **argv)
 	catch (const std::invalid_argument &error)
 	{
 		std::cerr << "Fatal error:" << error.what() << std::endl;
-	}
-	catch (const SDLException & error)
-	{
-		std::cerr << "Fatal error:" << error.what()  << ", SDL error: " << error.GetSDLError() << std::endl;
-	}
+	}	
 	//catch (...)
 	//{
 

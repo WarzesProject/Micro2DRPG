@@ -6,7 +6,6 @@ class Texture;
 
 class Renderer : public Module<Renderer>
 {
-	friend class Texture;
 public:
 	Renderer();
 	~Renderer();
@@ -22,14 +21,12 @@ public:
 	void RenderLine(float x1, float y1, float x2, float y2, Color color) const;
 	void RenderPoint(float x, float y, Color color) const;
 
-	int Width() const;
-	int Height() const;
+	SDL_Renderer* GetRender() const
+	{
+		return m_renderer;
+	}
 
 private:
 	SDL_Renderer *m_renderer{ nullptr };
-
-	mutable Color m_clearColor{ Color(0, 0, 0) };
-
-	int m_width;
-	int m_height;
+	Color m_clearColor{ Color(0, 0, 0) };
 };
