@@ -46,14 +46,14 @@
     <ClCompile Include="Rect.cpp">
       <Filter>Engine\math</Filter>
     </ClCompile>
-    <ClCompile Include="Surface.cpp">
-      <Filter>Engine\Render</Filter>
-    </ClCompile>
-    <ClCompile Include="SurfaceLock.cpp">
-      <Filter>Engine\Render</Filter>
-    </ClCompile>
     <ClCompile Include="Text.cpp">
-      <Filter>Engine\Render\Graphics</Filter>
+      <Filter>Engine\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureManager.cpp">
+      <Filter>Engine\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationSprite.cpp">
+      <Filter>Engine\Graphics</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -125,11 +125,17 @@
     <ClInclude Include="Optional.h">
       <Filter>Engine\Utility</Filter>
     </ClInclude>
-    <ClInclude Include="Surface.h">
+    <ClInclude Include="Text.h">
+      <Filter>Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureManager.h">
       <Filter>Engine\Render</Filter>
     </ClInclude>
-    <ClInclude Include="Text.h">
-      <Filter>Engine\Render\Graphics</Filter>
+    <ClInclude Include="TextureRef.h">
+      <Filter>Engine\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationSprite.h">
+      <Filter>Engine\Graphics</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -166,7 +172,7 @@
     <Filter Include="Engine\Audio">
       <UniqueIdentifier>{56717443-7450-455c-8789-fdec0785e84d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Engine\Render\Graphics">
+    <Filter Include="Engine\Graphics">
       <UniqueIdentifier>{584f9b99-0d39-48a3-b3ed-c166b358c53e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>

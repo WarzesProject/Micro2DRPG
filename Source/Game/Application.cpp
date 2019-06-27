@@ -6,6 +6,7 @@
 #include "Input.h"
 #include "Window.h"
 #include "Renderer.h"
+#include "TextureManager.h"
 
 //-----------------------------------------------------------------------------
 bool isExitApp = false;
@@ -25,10 +26,12 @@ Application::Application(const ApplicationConfig &config)
 	Input::Create();
 	Window::Create(m_config.title, m_config.width, m_config.height, m_config.fullscreen);
 	Renderer::Create();
+	TextureManager::Create();
 }
 //-----------------------------------------------------------------------------
 Application::~Application()
 {
+	TextureManager::Destroy();
 	Renderer::Destroy();
 	Window::Destroy();
 	Input::Destroy();

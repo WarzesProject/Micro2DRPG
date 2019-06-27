@@ -3,6 +3,7 @@
 #include "Window.h"
 #include "Texture.h"
 #include "Text.h"
+#include "TextureRef.h"
 
 //-----------------------------------------------------------------------------
 Renderer::Renderer()
@@ -10,7 +11,7 @@ Renderer::Renderer()
 	auto &window = GetModule<Window>();
 	const auto sdlWindow = window.m_window;
 
-	const Uint32 flags = SDL_RENDERER_ACCELERATED /*| SDL_RENDERER_PRESENTVSYNC*/;
+	const Uint32 flags = SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC;
 
 	m_renderer = SDL_CreateRenderer(sdlWindow, -1, flags);
 	if (nullptr == m_renderer)
@@ -74,6 +75,24 @@ void Renderer::RenderTexture(int x, int y, const Texture &texture, const Rect &c
 	const SDL_Rect rect{ x, y, clip.w, clip.h };
 	const SDL_Rect sdlClip{ clip.x, clip.y, clip.w, clip.h };
 	SDL_RenderCopy(m_renderer, sdlTexture, &sdlClip, &rect);
+}
+//-----------------------------------------------------------------------------
+void Renderer::RenderTexture(int x, int y, const TextureRef &texture) const
+{
+	if (!texture.texture) return; TODO("no texture");
+	RenderTexture(x, y, *texture.texture);
+}
+//-----------------------------------------------------------------------------
+void Renderer::RenderTexture(int x, int y, const TextureRef &texture, double angle) const
+{
+	if (!texture.texture) return; TODO("no texture");
+	RenderTexture(x, y, *texture.texture, angle);
+}
+//-----------------------------------------------------------------------------
+void Renderer::RenderTexture(int x, int y, const TextureRef &texture, const Rect &clip) const
+{
+	if (!texture.texture) return; TODO("no texture");
+	RenderTexture(x, y, *texture.texture, clip);
 }
 //-----------------------------------------------------------------------------
 void Renderer::RenderText(int x, int y, const Text &text) const

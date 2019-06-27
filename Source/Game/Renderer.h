@@ -2,8 +2,8 @@
 
 #include "Color.h"
 #include "Rect.h"
+#include "TextureRef.h"
 
-class Texture;
 class Text;
 
 class Renderer : public Module<Renderer>
@@ -21,6 +21,11 @@ public:
 	void RenderTexture(int x, int y, const Texture &texture) const;
 	void RenderTexture(int x, int y, const Texture &texture, double angle) const;
 	void RenderTexture(int x, int y, const Texture &texture, const Rect &clip) const;
+	void RenderTexture(int x, int y, const TextureRef &texture) const;
+	void RenderTexture(int x, int y, const TextureRef &texture, double angle) const;
+	void RenderTexture(int x, int y, const TextureRef &texture, const Rect &clip) const;
+
+
 
 	void RenderText(int x, int y, const Text &text) const;
 

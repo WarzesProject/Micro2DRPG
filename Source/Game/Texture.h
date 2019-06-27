@@ -2,7 +2,7 @@
 
 #include "Color.h"
 #include "Font.h"
-#include "Surface.h"
+//#include "Surface.h"
 
 class Renderer;
 
@@ -18,7 +18,7 @@ public:
 	int Height() const;
 
 private:
-	void loadTextureFromSurface(const Surface &surface);
+	//void loadTextureFromSurface(const Surface &surface);
 
 	SDL_Texture *m_texture{ nullptr };
 	SDL_Rect m_rect{ 0, 0, 0, 0 };

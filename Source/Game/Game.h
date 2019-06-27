@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Texture.h"
+#include "TextureManager.h"
 #include "Font.h"
 #include "Text.h"
 
@@ -12,7 +12,7 @@ public:
 	void Close();
 
 private:
-	Texture* m_texture = nullptr;
+	TextureRef m_textureRef;
 	Font *m_font = nullptr;
 	Text *m_text = nullptr;
 };

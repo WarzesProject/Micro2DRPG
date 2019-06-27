@@ -9,33 +9,6 @@ struct SDL_PixelFormat;
 class Surface 
 {
 public:
-	// For direct pixel access, SDL surface may need to be locked.
-	// This class represents the lock and controls its lifetime
-	// as the lock is released as soon as LockHandle is destroyed.
-	class LockHandle 
-	{
-		friend class Surface;
-	public:
-		LockHandle() = default;
-		LockHandle(const LockHandle& other) = delete;
-		LockHandle(LockHandle &&other) noexcept;
-		~LockHandle();
-
-		LockHandle& operator=(const LockHandle &other) = delete;
-		LockHandle& operator=(LockHandle &&other) noexcept;
-
-		void* GetPixels() const;
-		int GetPitch() const;
-		const SDL_PixelFormat& GetFormat() const;
-
-	private:
-		explicit LockHandle(Surface *surface);
-
-	private:
-		Surface *m_surface = nullptr;
-	};
-
-public:
 	explicit Surface(SDL_Surface *surface);
 	Surface(int width, int height, int depth, Uint32 Rmask, Uint32 Gmask, Uint32 Bmask, Uint32 Amask);
 	Surface(void *pixels, int width, int height, int depth, int pitch, Uint32 Rmask, Uint32 Gmask, Uint32 Bmask, Uint32 Amask);
@@ -56,9 +29,7 @@ public:
 
 	void Blit(const Optional<Rect> &srcrect, Surface &dst, const Rect &dstrect);
 	void BlitScaled(const Optional<Rect> &srcrect, Surface &dst, const Optional<Rect> &dstrect);
-
-	LockHandle Lock();
-
+	
 	Rect GetClipRect() const;
 	Uint32 GetColorKey() const;
 	Uint8 GetAlphaMod() const;
