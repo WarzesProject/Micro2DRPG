@@ -22,6 +22,9 @@ void SDLApp::init()
 
 	if (-1 == Mix_OpenAudio(MIX_DEFAULT_FREQUENCY, MIX_DEFAULT_FORMAT, MIX_DEFAULT_CHANNELS, 1024))
 		throw SDLException("Mix_OpenAudio");
+
+
+	SDL_SetHint(SDL_HINT_RENDER_SCALE_QUALITY, "2");
 }
 //-----------------------------------------------------------------------------
 void SDLApp::close()

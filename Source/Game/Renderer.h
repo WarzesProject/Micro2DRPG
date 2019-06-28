@@ -24,9 +24,6 @@ public:
 	void RenderTexture(int x, int y, const TextureRef &texture) const;
 	void RenderTexture(int x, int y, const TextureRef &texture, double angle) const;
 	void RenderTexture(int x, int y, const TextureRef &texture, const Rect &clip) const;
-
-
-
 	void RenderText(int x, int y, const Text &text) const;
 
 	void RenderLine(float x1, float y1, float x2, float y2, Color color) const;

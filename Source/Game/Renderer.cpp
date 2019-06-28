@@ -6,12 +6,14 @@
 #include "TextureRef.h"
 
 //-----------------------------------------------------------------------------
+TODO("идея на будущее: Renderer не сразу рисует, а накапливает в массив. это позволит реализовать слои и сортировку");
+//-----------------------------------------------------------------------------
 Renderer::Renderer()
 {
 	auto &window = GetModule<Window>();
 	const auto sdlWindow = window.m_window;
 
-	const Uint32 flags = SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC;
+	const Uint32 flags = SDL_RENDERER_ACCELERATED /*| SDL_RENDERER_PRESENTVSYNC*/;
 
 	m_renderer = SDL_CreateRenderer(sdlWindow, -1, flags);
 	if (nullptr == m_renderer)

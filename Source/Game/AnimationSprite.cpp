@@ -3,45 +3,60 @@
 #include "TextureManager.h"
 #include "Renderer.h"
 
-void AnimationSprite::SetTexture(const std::string &name)
+//-----------------------------------------------------------------------------
+void AnimationSprite::Init(const std::string &name, int spriteWidth, int spriteHeight, int countX, int countY)
 {
 	m_texture = TextureManager::GetTexture(name);
-}
 
-void AnimationSprite::SetFrames(const Rect &clip, int column, int line)
-{
 	const int widthTex = m_texture.texture->Width();
 	const int heightTex = m_texture.texture->Height();
 
-	const int widthSprite = clip.w;
-	const int heightSprite = clip.h;
+	countX = std::min(countX, widthTex / spriteWidth);
+	countY = std::min(countY, heightTex / spriteHeight);
 
-	column = std::min(column, widthTex / widthSprite);
-	line = std::min(line, heightTex / heightSprite);
+	m_frames.resize(countX);
+	for (int i = 0; i < countX; i++)
+		m_frames[i].resize(countY);
 
-	m_frames.resize(line);
-	for (int i = 0; i < line; i++)
-		m_frames[i].resize(column);
-
-	for (int x = 0; x < line; x++)
+	for (int x = 0; x < countX; x++)
 	{
-		for (int y = 0; y < column; y++)
+		for (int y = 0; y < countY; y++)
 		{
-			m_frames[x][y].clip = { x * widthSprite, y * heightSprite, widthSprite, heightSprite };
+			m_frames[x][y].clip = { x * spriteWidth, y * spriteHeight, spriteWidth, spriteHeight };
 		}
 	}
 }
-
-void AnimationSprite::Draw(size_t line)
+//-----------------------------------------------------------------------------
+void AnimationSprite::Play()
 {
-	static auto &renderer = GetModule<Renderer>();
-
-	//for (int i = 0; i < m_frames[line].size(); i++)
-	{
-		renderer.RenderTexture(100, 100, m_texture, m_frames[m_curFrameSet][line].clip);
-	}
-
-	m_curFrameSet++;
-	if (m_curFrameSet >= m_frames.size())
-		m_curFrameSet = 0;
+	m_animated = true;
 }
+//-----------------------------------------------------------------------------
+void AnimationSprite::Stop()
+{
+	m_animated = false;
+	m_currentFrame = 0;
+	m_elapsed = 0.0f;
+}
+//-----------------------------------------------------------------------------
+void AnimationSprite::Draw(int x, int y, size_t Yset, float delta, int animSpeed)
+{
+	if (m_frames[m_currentFrame].size() <= Yset) return;
+
+	static auto &renderer = GetModule<Renderer>();
+	renderer.RenderTexture(x, y, m_texture, m_frames[m_currentFrame][Yset].clip);
+	
+	if (m_animated)
+	{
+		m_elapsed += delta;
+		if (m_elapsed > (float)animSpeed / 100.0f)
+		{
+			m_currentFrame++;
+			if (m_currentFrame >= m_frames.size())
+				m_currentFrame = 0;
+
+			m_elapsed = 0;
+		}
+	}	
+}
+//-----------------------------------------------------------------------------

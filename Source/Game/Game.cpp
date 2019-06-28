@@ -5,8 +5,10 @@
 #include "Window.h"
 #include "Utility.h"
 #include "AnimationSprite.h"
+#include "Sprite.h"
 
-AnimationSprite spr;
+AnimationSprite aniSpr;
+Sprite spr;
 
 //-----------------------------------------------------------------------------
 void ExitApp();
@@ -28,9 +30,10 @@ void Game::Init()
 	renderer.SetClearColor({ 100,0,100 });
 
 
+	aniSpr.Init(GetResourcePath() + "character2.png", 32, 48, 4, 4);
+	spr.Init(GetResourcePath() + "character2.png", { 32,48,32, 48 });
 
-	spr.SetTexture(GetResourcePath() + "character2.png");
-	spr.SetFrames({ 0,0,32, 48 }, 4, 1);
+	aniSpr.Play();	
 }
 //-----------------------------------------------------------------------------
 void Game::Frame(float delta)
@@ -39,12 +42,12 @@ void Game::Frame(float delta)
 	static auto &input = GetModule<Input>();
 	static auto &window = GetModule<Window>();
 	
-
 	//renderer.RenderTexture(100, 100, m_textureRef, { 0,0, 64, 50 });
+	
+	aniSpr.Draw(100,100, 2, delta);
+	//spr.Draw(100, 100);
 
-	//renderer.RenderText(100, 200, *m_text);
-
-	spr.Draw(1);
+	m_text->Draw(100, 200);
 
 	if (input.KeyPress(KeyboardKey::Escape))
 		ExitApp();

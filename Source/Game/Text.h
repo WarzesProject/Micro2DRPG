@@ -10,6 +10,7 @@ public:
 	~Text();
 
 	void SetText(const Font &font, const std::string &text, Color color, bool blended = true);
+	void Draw(int x, int y);
 
 private:
 	SDL_Texture *m_texture{ nullptr };

@@ -1,6 +1,5 @@
 #include "stdafx.h"
 #include "Text.h"
-//#include "Surface.h"
 #include "Renderer.h"
 
 //-----------------------------------------------------------------------------
@@ -39,5 +38,11 @@ void Text::SetText(const Font &font, const std::string &text, Color color, bool 
 
 	if (SDL_QueryTexture(m_texture, nullptr, nullptr, &m_rect.w, &m_rect.h) < 0)
 		throw SDLException("SDL_QueryTexture");
+}
+//-----------------------------------------------------------------------------
+void Text::Draw(int x, int y)
+{
+	static auto &renderer = GetModule<Renderer>();
+	renderer.RenderText(x, y, *this);
 }
 //-----------------------------------------------------------------------------

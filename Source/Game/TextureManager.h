@@ -9,7 +9,7 @@ public:
 	~TextureManager();
 
 	static TextureRef GetTexture(const std::string &str);
-
+	
 private:
 	TextureRef getTexture(const std::string &str);
 
