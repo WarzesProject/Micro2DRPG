@@ -186,9 +186,11 @@
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Log.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="Rect.cpp" />
     <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="SceneGame.cpp" />
     <ClCompile Include="SDLApp.cpp" />
     <ClCompile Include="Sound.cpp" />
     <ClCompile Include="Sprite.cpp" />
@@ -211,6 +213,7 @@
     <ClInclude Include="Application.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Color.h" />
+    <ClInclude Include="CoreGame.h" />
     <ClInclude Include="CoreInput.h" />
     <ClInclude Include="Exception.h" />
     <ClInclude Include="Font.h" />
@@ -220,10 +223,12 @@
     <ClInclude Include="Module.h" />
     <ClInclude Include="NonCopyable.h" />
     <ClInclude Include="Optional.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="Point.h" />
     <ClInclude Include="Profile.h" />
     <ClInclude Include="Rect.h" />
     <ClInclude Include="Renderer.h" />
+    <ClInclude Include="SceneGame.h" />
     <ClInclude Include="SDLApp.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="Sprite.h" />

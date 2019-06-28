@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "TextureManager.h"
+#include "Utility.h"
 
 //-----------------------------------------------------------------------------
 TextureManager::TextureManager()
@@ -22,12 +23,14 @@ TextureRef TextureManager::getTexture(const std::string &str)
 {
 	TextureRef ref;
 
-	auto it = m_textures.find(str);
+	const std::string fullName = GetResourcePath("sprite") + str;
+
+	auto it = m_textures.find(fullName);
 	if (it == m_textures.end())
 	{
 		try
 		{
-			m_textures[str].texture = std::make_shared<Texture>(str);
+			m_textures[fullName].texture = std::make_shared<Texture>(fullName);
 		}
 		catch (const SDLException &error)
 		{
@@ -35,7 +38,7 @@ TextureRef TextureManager::getTexture(const std::string &str)
 		}
 	}
 
-	ref.texture = m_textures[str].texture;
+	ref.texture = m_textures[fullName].texture;
 	return ref;
 }
 //-----------------------------------------------------------------------------

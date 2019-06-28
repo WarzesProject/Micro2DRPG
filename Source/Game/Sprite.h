@@ -7,7 +7,7 @@ class Sprite
 {
 public:
 	void Init(const std::string &name, const Rect &clip = { 0,0,0,0 });
-
+	void Free();
 	void Draw(int x, int y);
 
 private:

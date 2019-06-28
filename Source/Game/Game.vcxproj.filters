@@ -61,6 +61,12 @@
     <ClCompile Include="Camera.cpp">
       <Filter>Game\Scene</Filter>
     </ClCompile>
+    <ClCompile Include="SceneGame.cpp">
+      <Filter>Game\Scene\SceneList</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Game\Player</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -149,6 +155,15 @@
     <ClInclude Include="Camera.h">
       <Filter>Game\Scene</Filter>
     </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Game\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneGame.h">
+      <Filter>Game\Scene\SceneList</Filter>
+    </ClInclude>
+    <ClInclude Include="CoreGame.h">
+      <Filter>Game\Core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">
@@ -192,6 +207,15 @@
     </Filter>
     <Filter Include="Game\Scene">
       <UniqueIdentifier>{80df2063-4143-4683-a0ed-95364646d09e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Player">
+      <UniqueIdentifier>{06ec92ea-43dd-42ea-9d02-9c9634d58a05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Scene\SceneList">
+      <UniqueIdentifier>{41695126-49fa-44f3-af7c-c0b413365a58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Core">
+      <UniqueIdentifier>{d9ac746b-f10b-44f9-94d6-0884877eec3c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

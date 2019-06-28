@@ -10,6 +10,11 @@ void Sprite::Init(const std::string &name, const Rect &clip)
 	m_clip = clip;
 }
 //-----------------------------------------------------------------------------
+void Sprite::Free()
+{
+	m_texture.Free();
+}
+//-----------------------------------------------------------------------------
 void Sprite::Draw(int x, int y)
 {
 	static auto &renderer = GetModule<Renderer>();

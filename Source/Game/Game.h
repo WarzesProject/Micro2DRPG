@@ -1,8 +1,12 @@
 #pragma once
 
-#include "TextureManager.h"
-#include "Font.h"
-#include "Text.h"
+#include "SceneGame.h"
+
+enum class CurrentScene
+{
+	None,
+	Game
+};
 
 class Game
 {
@@ -11,8 +15,11 @@ public:
 	void Frame(float delta);
 	void Close();
 
+	void SetScene(CurrentScene scene);
+
 private:
-	TextureRef m_textureRef;
-	Font *m_font = nullptr;
-	Text *m_text = nullptr;
+	SceneGame m_game;
+
+	CurrentScene m_currentScene = CurrentScene::None;
+
 };

@@ -5,6 +5,11 @@
 //-----------------------------------------------------------------------------
 Text::~Text()
 {
+	Free();
+}
+//-----------------------------------------------------------------------------
+void Text::Free()
+{
 	if (m_texture)
 	{
 		SDL_DestroyTexture(m_texture);
@@ -14,11 +19,7 @@ Text::~Text()
 //-----------------------------------------------------------------------------
 void Text::SetText(const Font &font, const std::string &text, Color color, bool blended)
 {
-	if (m_texture)
-	{
-		SDL_DestroyTexture(m_texture);
-		m_texture = nullptr;
-	}
+	Free();
 
 	const auto sdlFont = font.m_font;
 	const SDL_Color sdlForeground{ color.r, color.g, color.b, color.a };

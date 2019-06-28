@@ -7,6 +7,7 @@
 void AnimationSprite::Init(const std::string &name, int spriteWidth, int spriteHeight, int countX, int countY)
 {
 	m_texture = TextureManager::GetTexture(name);
+	m_spriteSize = { spriteWidth, spriteHeight };
 
 	const int widthTex = m_texture.texture->Width();
 	const int heightTex = m_texture.texture->Height();
@@ -25,6 +26,15 @@ void AnimationSprite::Init(const std::string &name, int spriteWidth, int spriteH
 			m_frames[x][y].clip = { x * spriteWidth, y * spriteHeight, spriteWidth, spriteHeight };
 		}
 	}
+}
+//-----------------------------------------------------------------------------
+void AnimationSprite::Free()
+{
+	m_animated = false;
+	m_currentFrame = 0;
+	m_elapsed = 0.0f;
+	m_frames.clear();
+	m_texture.Free();
 }
 //-----------------------------------------------------------------------------
 void AnimationSprite::Play()

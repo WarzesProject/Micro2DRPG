@@ -11,6 +11,8 @@ public:
 	bool InView(int x, int y, int h, int w);
 	void Move(const Point &deltaPos);
 
+	Point GetSize() { setSize(); return m_size; }
+
 private:
 	void setSize();
 	Point m_pos;
