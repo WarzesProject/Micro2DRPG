@@ -67,6 +67,9 @@
     <ClCompile Include="Player.cpp">
       <Filter>Game\Player</Filter>
     </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Game\Map</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -164,6 +167,12 @@
     <ClInclude Include="CoreGame.h">
       <Filter>Game\Core</Filter>
     </ClInclude>
+    <ClInclude Include="Tile.h">
+      <Filter>Game\Map</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Game\Map</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">
@@ -216,6 +225,9 @@
     </Filter>
     <Filter Include="Game\Core">
       <UniqueIdentifier>{d9ac746b-f10b-44f9-94d6-0884877eec3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Map">
+      <UniqueIdentifier>{074b1639-695b-4351-b5e8-9b8ad4fbff4d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
