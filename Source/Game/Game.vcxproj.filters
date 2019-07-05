@@ -67,9 +67,6 @@
     <ClCompile Include="Player.cpp">
       <Filter>Game\Player</Filter>
     </ClCompile>
-    <ClCompile Include="Map.cpp">
-      <Filter>Game\Map</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -166,12 +163,6 @@
     </ClInclude>
     <ClInclude Include="CoreGame.h">
       <Filter>Game\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Tile.h">
-      <Filter>Game\Map</Filter>
-    </ClInclude>
-    <ClInclude Include="Map.h">
-      <Filter>Game\Map</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

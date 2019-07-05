@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_DOC", "_DOC", "{CFC02BA8-8E91-47BB-B45E-55EB8B29C8A3}"
 	ProjectSection(SolutionItems) = preProject
 		doc1.txt = doc1.txt
+		History.txt = History.txt
 	EndProjectSection
 EndProject
 Global
