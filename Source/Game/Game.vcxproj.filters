@@ -64,6 +64,10 @@
     <ClCompile Include="Player.cpp">
       <Filter>Game\Player</Filter>
     </ClCompile>
+    <ClCompile Include="TowerScene.cpp">
+      <Filter>GameScene\GameMode</Filter>
+    </ClCompile>
+    <ClCompile Include="Global.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="stdafx.h" />
@@ -155,6 +159,13 @@
     <ClInclude Include="CoreGame.h">
       <Filter>Game\Core</Filter>
     </ClInclude>
+    <ClInclude Include="IScene.h">
+      <Filter>GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerScene.h">
+      <Filter>GameScene\GameMode</Filter>
+    </ClInclude>
+    <ClInclude Include="Global.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Engine">
@@ -210,6 +221,12 @@
     </Filter>
     <Filter Include="GameScene">
       <UniqueIdentifier>{d7a49176-b752-44de-97d8-ca17c3f0a071}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameScene\MainMenu">
+      <UniqueIdentifier>{13348598-87b8-42d1-bcca-a711df75862e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameScene\GameMode">
+      <UniqueIdentifier>{c26b8184-572f-4c68-af6d-fca9a5e2e5e1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
