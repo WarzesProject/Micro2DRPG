@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Rect.h"
 
+//-----------------------------------------------------------------------------
 Rect Rect::GetUnion(const Rect& rect) const
 {
 	return Rect::FromCorners(
@@ -10,7 +11,7 @@ Rect Rect::GetUnion(const Rect& rect) const
 		std::max(GetY2(), rect.GetY2())
 	);
 }
-
+//-----------------------------------------------------------------------------
 Rect& Rect::Union(const Rect& rect) 
 {
 	int nx = std::min(x, rect.x);
