@@ -61,9 +61,6 @@
     <ClCompile Include="Camera.cpp">
       <Filter>Game\Scene</Filter>
     </ClCompile>
-    <ClCompile Include="SceneGame.cpp">
-      <Filter>Game\Scene\SceneList</Filter>
-    </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>Game\Player</Filter>
     </ClCompile>
@@ -99,9 +96,6 @@
     </ClInclude>
     <ClInclude Include="Input.h">
       <Filter>Engine\App\Input</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector2d.h">
-      <Filter>Engine\Core\math</Filter>
     </ClInclude>
     <ClInclude Include="Window.h">
       <Filter>Engine\App\window</Filter>
@@ -158,9 +152,6 @@
     <ClInclude Include="Player.h">
       <Filter>Game\Player</Filter>
     </ClInclude>
-    <ClInclude Include="SceneGame.h">
-      <Filter>Game\Scene\SceneList</Filter>
-    </ClInclude>
     <ClInclude Include="CoreGame.h">
       <Filter>Game\Core</Filter>
     </ClInclude>
@@ -211,14 +202,14 @@
     <Filter Include="Game\Player">
       <UniqueIdentifier>{06ec92ea-43dd-42ea-9d02-9c9634d58a05}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Game\Scene\SceneList">
-      <UniqueIdentifier>{41695126-49fa-44f3-af7c-c0b413365a58}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Game\Core">
       <UniqueIdentifier>{d9ac746b-f10b-44f9-94d6-0884877eec3c}</UniqueIdentifier>
     </Filter>
     <Filter Include="Game\Map">
       <UniqueIdentifier>{074b1639-695b-4351-b5e8-9b8ad4fbff4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameScene">
+      <UniqueIdentifier>{d7a49176-b752-44de-97d8-ca17c3f0a071}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

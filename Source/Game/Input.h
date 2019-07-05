@@ -1,7 +1,7 @@
 #pragma once
 
 #include "CoreInput.h"
-#include "Vector2d.h"
+#include "Point.h"
 
 class Input : public Module<Input>
 {
@@ -18,7 +18,7 @@ public:
 	bool MouseUp(MouseButton button) const;
 	bool MouseClick(MouseButton button) const;
 	bool MouseMove() const;
-	const Vec2i& MousePosition() const;
+	const Point& MousePosition();
 
 	bool Quit() const;
 
@@ -32,7 +32,7 @@ private:
 	std::vector<bool> m_mouseButtonsDown = std::vector<bool>(4, false);
 	std::vector<bool> m_mouseButtonsClick = std::vector<bool>(4, false);
 
-	mutable Vec2i m_mousePos;
+	Point m_mousePos;
 
 	bool m_mouseMove{ false };
 
